@@ -8,7 +8,7 @@
 
 
 ## Instance layout (base paths)
-method.insert = cfg.download, private|const|string, (cat,(cfg.basedir),"download/")
+method.insert = cfg.download, private|const|string, (cat,(cfg.basedir),"downloads/")
 method.insert = cfg.session,  private|const|string, (cat,(cfg.basedir),".session/")
 method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
 
