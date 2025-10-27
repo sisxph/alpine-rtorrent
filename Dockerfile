@@ -8,16 +8,16 @@ LABEL description="rTorrent on Alpine Linux, with a better Docker integration."
 LABEL website="https://github.com/TuxMeaLux/alpine-rtorrent"
 LABEL version="$VERSION"
 
-RUN addgroup --gid $UGID rtorrent && \
-    adduser -S -u $UGID -G rtorrent rtorrent && \
-    dnf -y install rtorrent --setopt=install_weak_deps=False && \
-    dnf clean all && \
-    mkdir -p /home/rtorrent/.rtorrent/config.d/ && \
-    mkdir -p /home/rtorrent/.rtorrent/.session/ && \
-    mkdir -p /home/rtorrent/.rtorrent/downloads/ && \
-    mkdir -p /home/rtorrent/.rtorrent/watch/ && \
-    chown -R rtorrent:rtorrent /home/rtorrent/.rtorrent/ && \
-    cp -r /home/rtorrent/.rtorrent/ /home/rtorrent/rtorrent/
+RUN addgroup --gid $UGID rtorrent
+RUN    adduser -S -u $UGID -G rtorrent rtorrent
+RUN    dnf -y install rtorrent --setopt=install_weak_deps=False
+RUN    dnf clean all
+RUN    mkdir -p /home/rtorrent/.rtorrent/config.d/
+RUN    mkdir -p /home/rtorrent/.rtorrent/.session/
+RUN    mkdir -p /home/rtorrent/.rtorrent/downloads/
+RUN    mkdir -p /home/rtorrent/.rtorrent/watch/
+RUN    chown -R rtorrent:rtorrent /home/rtorrent/.rtorrent/
+RUN    cp -r /home/rtorrent/.rtorrent/ /home/rtorrent/rtorrent/
 
 COPY --chown=rtorrent:rtorrent config.d/ /home/rtorrent/.rtorrent/config.d/
 COPY --chown=rtorrent:rtorrent .rtorrent.rc /home/rtorrent/
