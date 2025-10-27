@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ARG VERSION="0.15.4-r0"
+ARG VERSION="0.16.1"
 ARG UGID=1000
 
 LABEL maintainer="Gianluca Gabrielli" mail="tuxmealux+dockerhub@protonmail.com"
@@ -10,7 +10,6 @@ LABEL version="$VERSION"
 
 RUN addgroup --gid $UGID rtorrent && \
     adduser -S -u $UGID -G rtorrent rtorrent && \
-    apk add --no-cache rtorrent="$VERSION" && \
     mkdir -p /home/rtorrent/.rtorrent/config.d/ && \
     mkdir -p /home/rtorrent/.rtorrent/.session/ && \
     mkdir -p /home/rtorrent/.rtorrent/downloads/ && \
