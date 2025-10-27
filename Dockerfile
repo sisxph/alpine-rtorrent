@@ -9,7 +9,7 @@ LABEL website="https://github.com/TuxMeaLux/alpine-rtorrent"
 LABEL version="$VERSION"
 
 RUN    groupadd -u $UGID rtorrent
-RUN    useradd -S -u $UGID -G rtorrent rtorrent
+RUN    useradd -u $UGID -G rtorrent rtorrent
 RUN    dnf -y install rtorrent --setopt=install_weak_deps=False
 RUN    dnf clean all
 RUN    mkdir -p /home/rtorrent/.rtorrent/config.d/
