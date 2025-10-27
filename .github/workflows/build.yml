@@ -1,9 +1,9 @@
 name: Build
 on:
   push:
-    branches: ["master"]
+    branches: ["rawhide-rtorrent"]
   pull_request:
-    branches: ["master"]
+    branches: ["rawhide-rtorrent"]
 jobs:
   build:
     runs-on: ubuntu-latest
