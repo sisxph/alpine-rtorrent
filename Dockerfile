@@ -8,8 +8,8 @@ LABEL description="rTorrent on Alpine Linux, with a better Docker integration."
 LABEL website="https://github.com/TuxMeaLux/alpine-rtorrent"
 LABEL version="$VERSION"
 
-RUN addgroup --gid $UGID rtorrent
-RUN    adduser -S -u $UGID -G rtorrent rtorrent
+RUN    groupadd -u $UGID rtorrent
+RUN    useradd -u $UGID -G rtorrent rtorrent
 RUN    dnf -y install rtorrent --setopt=install_weak_deps=False
 RUN    dnf clean all
 RUN    mkdir -p /home/rtorrent/.rtorrent/config.d/
