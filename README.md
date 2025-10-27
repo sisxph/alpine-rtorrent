@@ -3,7 +3,7 @@
 This is one of the thousands dockerized [rTorrent](https://github.com/rakshasa/rtorrent) images. I opted to create my own one for the two following main reasons:
 
  - Make practice with Docker.
- - Have a modular and well docker integrated rTorrent daemon based on [Alpine Linux](https://alpinelinux.org/).
+ - Have a modular and well docker integrated rTorrent daemon based on [Fedora Linux](https://fedoraproject.org/).
 
 I've noticed there are lots of images for rTorrent, but just a few based on Alpine Linux, all the others use huge distros like centos or ubuntu. My philosophy is fewer lines of code mean less attack surface.
 
