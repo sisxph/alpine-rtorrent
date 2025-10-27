@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 jobs:
   build-and-publish-image:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
