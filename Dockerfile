@@ -11,7 +11,7 @@ LABEL version="$VERSION"
 RUN    groupadd -g $UGID rtorrent
 RUN    useradd -u $UGID -g rtorrent rtorrent
 RUN    dnf -y install rtorrent --setopt=install_weak_deps=False
-RUN    dnf -y install nodejs --setopt=install_weak_deps=False
+RUN    dnf -y install nodejs
 RUN    dnf clean all
 RUN    npm install --global @jesec/flood
 RUN    mkdir -p /home/rtorrent/.rtorrent/config.d/
