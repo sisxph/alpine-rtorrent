@@ -38,4 +38,6 @@ EXPOSE 50000
 
 USER rtorrent
 
+WORKDIR /home/rtorrent/
+
 CMD ["/home/rtorrent/entrypoint.sh"]
