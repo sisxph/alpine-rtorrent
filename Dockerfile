@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ARG VERSION="0.16.5-r0"
+ARG VERSION="0.16.12-r0"
 ARG UGID=1000
 
 LABEL maintainer="Gianluca Gabrielli" mail="tuxmealux+dockerhub@protonmail.com"
