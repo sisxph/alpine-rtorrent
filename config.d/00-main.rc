@@ -101,7 +101,7 @@ system.daemon.set = true
 network.scgi.open_local = (cat,(session.path),rpc.socket)
 execute.nothrow = chmod,777,(cat,(session.path),rpc.socket)
 ## INET socket
-#network.scgi.open_port = 0.0.0.0:16891
+network.scgi.open_port = 0.0.0.0:16891
 ## Flood
 method.redirect=load.throw,load.normal
 method.redirect=load.start_throw,load.start
