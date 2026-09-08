@@ -19,8 +19,6 @@ RUN addgroup --gid $UGID rtorrent && \
     
 RUN apk add --no-cache rtorrent="$VERSION"
 
-RUN mkdir -p /download/ 
-
 
 USER rtorrent
 
