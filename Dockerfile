@@ -19,6 +19,7 @@ RUN addgroup --gid $UGID rtorrent && \
     
 RUN apk add --no-cache rtorrent="$VERSION"
 
+RUN mkdir -p /download/ 
 
 
 USER rtorrent
@@ -26,7 +27,6 @@ USER rtorrent
 RUN mkdir -p /home/rtorrent/rtorrent/config.d/ && \
     mkdir -p /home/rtorrent/rtorrent/.session/ && \
     mkdir -p /home/rtorrent/rtorrent/download/ && \
-    mkdir -p /download/ && \
     mkdir -p /home/rtorrent/rtorrent/watch/
     
 COPY --chown=rtorrent:rtorrent config.d/ /home/rtorrent/rtorrent/config.d/
