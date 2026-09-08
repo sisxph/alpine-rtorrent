@@ -26,6 +26,7 @@ USER rtorrent
 RUN mkdir -p /home/rtorrent/rtorrent/config.d/ && \
     mkdir -p /home/rtorrent/rtorrent/.session/ && \
     mkdir -p /home/rtorrent/rtorrent/download/ && \
+    mkdir -p /download/ && \
     mkdir -p /home/rtorrent/rtorrent/watch/
     
 COPY --chown=rtorrent:rtorrent config.d/ /home/rtorrent/rtorrent/config.d/
